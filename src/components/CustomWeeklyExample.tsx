@@ -7,6 +7,7 @@ import { Box, Button, IconButton, Stack, Typography } from '@mui/material';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { getWeekOfMonth } from '../utils';
 
 const localizer = momentLocalizer(moment);
 
@@ -84,12 +85,12 @@ const CustomWeeklyExample = () => {
   };
 
   return (
-    <Box sx={{ width: '80vw', margin: 4 }}>
+    <Box sx={{ width: '80vw' }}>
       <Stack direction="row" justifyContent="space-between">
         <Typography>학습 캘린더</Typography>
         <Stack direction="row" gap={1}>
           <Button variant="contained" endIcon={<KeyboardArrowDownIcon />}>
-            6월 1주차
+            {date.toDate().getMonth() + 1}월 {getWeekOfMonth(date.toDate())}주차
           </Button>
           <Button variant="contained" onClick={handleToday}>
             오늘
