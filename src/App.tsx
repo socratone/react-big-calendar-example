@@ -1,9 +1,12 @@
-import LocaleExample from './components/LocaleExample';
+// import LocaleExample from './components/LocaleExample';
+
+import CustomWeeklyExample from './components/CustomWeeklyExample';
 
 function App() {
   return (
     <>
-      <LocaleExample />
+      {/* <LocaleExample /> */}
+      <CustomWeeklyExample />
     </>
   );
 }
